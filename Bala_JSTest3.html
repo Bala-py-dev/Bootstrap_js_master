@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test3</title>
+</head>
+
+<body>
+    <h5>1. Create one HTML document with 5 P tags, 5 anchor tags,5 bullet list. Add 3 button, 1 should used to click and change color of P, second to click and change color of anchor, third to click and change color of bullet text.</h5>
+    <hr>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <button type="button" onclick="myFun()">Change</button>
+    <hr>
+    <a href="#">World</a>
+    <a href="#">World</a>
+    <a href="#">World</a>
+    <a href="#">World</a>
+    <a href="#">World</a>
+    <button type="button" onclick="myFun1()">Change</button>
+    <hr>
+    <ul>
+        <li>Bala</li>
+        <li>Bala</li>
+        <li>Bala</li>
+        <li>Bala</li>
+        <li>Bala</li>
+    </ul>
+    <button type="button" onclick="myFun2()">Change</button>
+    <!-- sripting -->
+    <script>
+        function myFun() {
+            p = document.getElementsByTagName('p');
+            for (i = 0; i <= p.length; i++) {
+                p[i].setAttribute('style', 'color:yellow');
+            }
+        }
+
+        function myFun1() {
+            a = document.getElementsByTagName('a');
+            for (i = 0; i <= a.length; i++) {
+                a[i].setAttribute('style', 'color:red;text-decoration:none;');
+            }
+        }
+
+        function myFun2() {
+            ul = document.getElementsByTagName('ul');
+            for (i = 0; i <= ul.length; i++) {
+                ul[i].setAttribute('style', 'color:green;text-decoration:none;');
+            }
+        }
+    </script>
+    <!-- sripting -->
+</body>
+
+</html>

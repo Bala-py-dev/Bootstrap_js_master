@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test1</title>
+</head>
+
+<body>
+    <p>1. Write a JavaScript program to print the contents of the current window.</p>
+    <button type="button" onclick="myBtn()">Print the Current Window</button>
+    <hr>
+    <p>2. Write a JavaScript program to display the current day and time in the document</p>
+    <button type="button" id="btn1" onclick="myDate()">Current day and time</button>
+    <hr>
+    <p>3. Write a JavaScript program to calculate multiplication and division of two numbers (input from user via form)</p>
+    Value 1:- <input type="text" id="a" /><br><br> Value 2:- <input type="text" id="b" /><br><br>
+    <button type="button" onclick="myMul()">Multiplication</button>
+    <button type="button" onclick="myDiv()">Division</button>
+    <p id="mul"></p>
+    <p id="div"></p>
+    <hr>
+    <p>4. Write a JavaScript program to get the website URL (loading page) & </p>
+    <button type="button" onclick="myUrl()">Get Page URL</button>
+    <hr>
+    <p>5. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</p>
+    Value :- <input type="text" id="txt">
+    <button type="button" onclick="myDiff()">Get Difference</button>
+    <p id="diff"></p>
+    <!-- Sricpting -->
+    <script>
+        function myBtn() {
+            window.print();
+        }
+
+        function myDate() {
+            document.getElementById('btn1').innerHTML = Date();
+        }
+
+        function myMul() {
+            num1 = document.getElementById('a').value;
+            num2 = document.getElementById('b').value;
+            document.getElementById('mul').innerHTML = "Multiplication of" + " " + num1 + " " + "and" + " " + num2 + " " + "is :" + num1 * num2;
+        }
+
+        function myDiv() {
+            num1 = document.getElementById('a').value;
+            num2 = document.getElementById('b').value;
+            document.getElementById('div').innerHTML = "Division of" + " " + num1 + " " + "and" + " " + num2 + " " + "is :" + num1 / num2;
+        }
+
+        function myUrl() {
+            window.alert(document.URL);
+            console.log(document.URL);
+        }
+
+        function myDiff() {
+
+            num = document.getElementById('txt').value;
+            if (num <= 13) {
+                total = 13 - num;
+                window.alert(total);
+            } else {
+                total = (num - 13) * 2;
+                window.alert(total);
+            }
+            document.getElementById('diff').innerHTML = "Difference of" + " " + num + " " + "is :" + " " + total;
+            console.log(total);
+        }
+    </script>
+    <!-- Sricpting -->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Test2</title>
+</head>
+
+<body>
+    <p>1. On button click change the color of whole window.</p>
+    <button type="button" onclick="myCol()">Change Window Colour</button>
+    <hr>
+    <p>2. Program to say "Hello" on window loading, "Are you sure you want to leave" on close, "Goodbye" on unload.</p>
+    <button type="button" onclick="myClose()">Cancle</button>
+    <hr>
+    <p>3. On chnage event of input field, show inputed string in P tag.</p>
+    <p id="demo">hello</p><br>String :- <input type="text" id="txt" onchange="myStr()"><br><br>
+    <hr>
+    <p>4. On mouse click on anyplace of whole document, you should print value of top,left pixel of position.</p>
+    <h2 onclick="myPosition()"></h2>
+    <!-- sripting -->
+    <script>
+        function myCol() {
+            document.body.style.background = "red";
+        }
+        window.alert('Hello');
+
+        function myClose() {
+            window.onbeforeunload = alert('Are you sure you want to leave');
+            window.onunload = alert('Goodbye');
+        }
+
+        function myStr() {
+            x = document.getElementById("txt").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
+
+        // function myPosition(event) {
+
+        // }
+    </script>
+    <!-- sripting -->
+</body>
+
+</html>
